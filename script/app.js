@@ -11,7 +11,7 @@ for (let i = 0; i < colorBtns.length; i++) {
         let colorName = e.target.id.split("-btn")[0];
 
         let productImage = document.getElementById('product-img');
-        productImage.src = '../images/' + colorName + '.png';
+        productImage.src = 'images/' + colorName + '.png';
 
 
     })
@@ -77,7 +77,7 @@ document.getElementById('add-cart').addEventListener('click', (e) => {
     }
     if(!itemExists){
         cartItems.push({
-             image: "../images/" + selectedColor + ".png",
+             image: "images/" + selectedColor + ".png",
             color: selectedColor,
             size: selectedSize,
             price: parseInt(selectedPrice) * quantity,
