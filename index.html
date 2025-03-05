@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <main class="container mx-auto  ">
+        <div class="max-w-4xl mx-auto mt-14">
+            <div class=" flex  justify-center gap-4 ">
+                <div class="images-container ">
+                    <img id="product-img" src="images/gray.png" alt="">
+                </div>
+                <div class="">
+                    <h1 id="Watch-title" class="font-bold text-2xl">Classy Modern Smart Watch</h1>
+                    <div class="my-4">
+                        <span class="text-yellow-400 mr-4">⁕⁕⁕⁕⁕⁕ </span>
+                        <span>(2 review)</span>
+                    </div>
+                    <h4 class="my-4">
+                        <span class="line-through text-slate-400 text-2xl">$99.00</span>
+                        <span class="text-violet-700 text-3xl font-bold" id="price">$79.00</span>
+                    </h4>
+                    <p class="text-gray-700 font-light">I must explain to you how all this mistaken idea of denouncing
+                        pleasure and praising pain was
+                        born and I will give you a complete account of the system, and expound the actual teaching </p>
+
+                    <div class="flex ">
+                        <h6 class="font-semibold w-24">Type:</h6>
+                        <h6 class="font-semibold w-24">Watch</h6>
+                    </div>
+                    <div class="flex ">
+                        <h6 class="font-semibold w-24">Model:</h6>
+                        <h6 class="font-semibold">Forerunner 290XT</h6>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-normal my-2">Band Color</h1>
+                        <div class="flex gap-3">
+                            <button id="purple-btn" class="rounded-full ring-button bg-purple-500 w-6 h-6 "></button>
+                            <button id="cyan-btn" class="rounded-full ring-button w-6 h-6 bg-cyan-500 "></button>
+                            <button id="gray-btn" class="rounded-full ring-button w-6 h-6    bg-gray-500"></button>
+                            <button id="teal-btn" class="rounded-full ring-button w-6 h-6   bg-teal-500 "></button>
+                        </div>
+
+                        <h5 class="font-normal text-lg my-2">Wrist Size</h5>
+                        <div class="flex items-center gap-x-3 text-center">
+                            <button class="border px-4 rounded-sm  size-btn">
+                                S $99
+                            </button>
+                            <button class="border px-4 rounded-sm  size-btn">
+                                M $80
+                            </button>
+                            <button class="border px-4 rounded-sm size-btn">
+                                L $120
+                            </button>
+                            <button class="border px-4 rounded-sm size-btn ">
+                                XL $180
+                            </button>
+                        </div>
+                        <div class="flex my-6 gap-3">
+                            <div class="flex items-center border rounded  py-1">
+                                <button class="px-4 quantity-btn">-</button>
+                                <span class="px-4 " id="quantity">0</span>
+                                <button class="px-4 quantity-btn">+</button>
+                            </div>
+                            <div class="">
+                                <button class=" bg-purple-700 px-6 py-2 rounded-md text-white text-lg" id="add-cart">Add
+                                    to Cart</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="checkout-container" class="text-center hidden">
+                <button id="checkout-btn" class="px-4 py-2 bg-yellow-600 rounded-md mt-5 text-white font-bold">Checkout
+                    <span id="cart-count" class="bg-white text-black px-2 py-1 rounded-lg font-bold">100</span></button>
+            </div>
+
+            <div id="cart-modal" class="fixed flex justify-center items-center z-50 inset-0 hidden">
+                <div class="bg-white p-6 rounded-lg shadow-lg ">
+                    <h2 class="texl-xl font-bold">Your Cart</h2>
+
+                    <div class="">
+                        <table>
+                            <thead>
+                                <tr class="border-b">
+                                    <th class="py-2 px-4">Items</th>
+                               
+                                    <th class="py-2 px-4">Color</th>
+                                    <th class="py-2 px-4">Size</th>
+                                    <th class="py-2 px-4">Quantity</th>
+                                    <th class="py-2 px-4">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-items" >
+
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="my-2 flex justify-end gap-2">
+                        <button class="px-4 py-2 rounded-md bg-slate-400" id="continue-btn">Continue Shopping</button>
+                    <button class="px-4 py-2 rounded-md bg-yellow-600" id="buy-btn" onclick="buyNow()">Buy Now</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- <script src="script/new.js"></script> -->
+    <script src="script/app.js"></script>
+</body>
+
+</html>
