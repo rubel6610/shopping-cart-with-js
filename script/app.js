@@ -114,10 +114,10 @@ document.getElementById('checkout-container').addEventListener('click', (e) => {
         <span>${title}</span>
         </div>
         </td>
-        <td>${color}</td>
-        <td>${size}</td>
-        <td>${quantity}</td>
-        <td>${price}</td>
+        <td class="text-center">${color}</td>
+        <td class="text-center">${size}</td>
+        <td class="text-center">${quantity}</td>
+        <td class="text-center">${price}</td>
         `;
         modalContainer.appendChild(trow);
        
@@ -126,9 +126,9 @@ document.getElementById('checkout-container').addEventListener('click', (e) => {
         totalrow.innerHTML = `
         <td></td>
         <td></td>
-        <td>Total</td>
-        <td>${totalQuantity}</td>
-        <td>${totalPrice}</td>
+        <td class="text-center">Total</td>
+        <td class="text-center">${totalQuantity}</td>
+        <td class="text-center">${totalPrice}</td>
         `;
         modalContainer.appendChild(totalrow);
 
